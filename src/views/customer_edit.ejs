@@ -1,0 +1,27 @@
+<%- include('partials/_header.ejs') %>
+
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>Edit Customer</h1>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/<%= data.id %>" method="POST">
+                        <div class="mb-3">
+                          <input type="text" class="form-control" name="name" placeholder="Name" value="<%= data.name %>">
+                        </div>  
+                        <div class="mb-3">
+                          <input type="text" class="form-control" name="address" placeholder="Address" value="<%= data.address %>">
+                        </div> 
+                        <div class="mb-3">
+                          <input type="text" class="form-control" name="phone" placeholder="Phone" value="<%= data.phone %>">
+                        </div> 
+                        <div class="mb-3 d-grid gap-2">
+                          <button type="submit" class="btn btn-primary">Update Customer</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include ('partials/_footer.ejs') %>
